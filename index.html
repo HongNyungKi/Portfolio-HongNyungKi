@@ -9,6 +9,7 @@
     <meta name="author" content="Hong Nyung Ki">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
         integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
         integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
@@ -21,29 +22,24 @@
 <body>
     <!-- Navbar -->
     <nav id="navbar">
-        <div class="navbar__logo">
-            <img src="./img/logo.png" alt="logo">
-            <a href="#">홍녕기</a>
-        </div>
-        <div>
-            <ul class="navbar__menu">
-                <li class="navbar__menu__item">Home</li>
-                <li class="navbar__menu__item">About</li>
-                <li class="navbar__menu__item">Skills</li>
-                <li class="navbar__menu__item">Work</li>
-                <li class="navbar__menu__item">Testimonials</li>
-                <li class="navbar__menu__item">contact</li>
-            </ul>
-        </div>
+        <a class="navbar__logo" href="#">洪宁基</a>
+        <ul class="navbar__menu">
+            <li class="navbar__menu__item active">Home</li>
+            <li class="navbar__menu__item">About</li>
+            <li class="navbar__menu__item">Skills</li>
+            <li class="navbar__menu__item">Work</li>
+            <li class="navbar__menu__item">Testimonials</li>
+            <li class="navbar__menu__item">contact</li>
+        </ul>
     </nav>
     <!-- Home -->
     <section id="home">
-        <img src="./img/profile.png" alt="profile" class="home__avatar">
+        <img src="./img/홍녕기image.png" alt="profile" class="home__avatar">
         <h1 class="home__title">
             Hello,<br />I'm Hong Nyung Ki
         </h1>
-        <h2>Developer who don't give up</h2>
-        <button>Contact Me</button>
+        <h2 class="home__description">Developer who don't give up</h2>
+        <button class="home__contact">Contact Me</button>
     </section>
     <!-- About -->
     <section id="about">

@@ -20,6 +20,23 @@ $weight-regular:400;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
 //TYPOGRAPHY
 h1 {
     font-size: $font-large;
@@ -47,4 +64,74 @@ p {
     font-weight: $weight-regular;
     color: $black;
     margin: 4px 0;
+}
+
+//NAVBAR
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $skyBlue;
+    padding: 18px;
+    color: white;
+
+    .navbar__logo {
+        display: flex;
+        align-items: center;
+        font-size: $font-medium;
+        font-weight: $weight-semi-bold;
+        letter-spacing: 4px;
+        margin-left: 10px;
+    }
+
+    .navbar__menu {
+        display: flex;
+
+        .navbar__menu__item {
+            padding: 10px;
+            margin: 0 10px;
+            font-size: $font-regular;
+            cursor: pointer;
+            border-radius: 4px;
+
+            &:hover {
+                background: $indigo;
+            }
+
+            &.active {
+                border: 1px solid $white;
+            }
+        }
+    }
+}
+
+//SECTION-HOME
+#home {
+    background: url('./img/background.png') center/cover no-repeat;
+    text-align: center;
+    padding: 80px 0;
+
+    .home__avatar {
+        width: 250px;
+        height: 250px;
+        background: $white;
+        border-radius: 50%;
+        object-fit: contain;
+        background: white;
+    }
+
+    .home__title,
+    .home__description {
+        color: $white;
+    }
+
+    .home__contact {
+        color: $white;
+        font-size: $font-regular;
+        font-weight: $weight-semi-bold;
+        margin-top: 24px;
+        padding: 8px 12px;
+        border: 2px solid $white;
+        border-radius: 4px;
+    }
 }
