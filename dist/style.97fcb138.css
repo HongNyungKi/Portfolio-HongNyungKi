@@ -15,6 +15,12 @@ button {
   cursor: pointer;
   outline: none; }
 
+.section {
+  text-align: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto; }
+
 h1 {
   font-size: 48px;
   font-weight: 700;
@@ -88,6 +94,27 @@ p {
     padding: 8px 12px;
     border: 2px solid #f1faee;
     border-radius: 4px; }
+
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0; }
+  .about__majors .major img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #457b9d;
+    border-radius: 50%;
+    padding: 20px;
+    margin-bottom: 16px;
+    transition: all 100ms ease-in; }
+  .about__majors .major .major__description {
+    color: gray;
+    font-size: 16px; }
+  .about__majors .major:hover img {
+    padding: 7px;
+    border: 3px solid #1d3557; }
+  .about__majors .major:hover .major__description {
+    color: #000000; }
 
 
 /*# sourceMappingURL=/style.97fcb138.css.map */
