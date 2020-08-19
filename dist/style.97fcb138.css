@@ -6,7 +6,8 @@ body {
   cursor: default; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: white; }
 
 button {
   background: transparent;
@@ -16,7 +17,6 @@ button {
 
 .section {
   text-align: center;
-  padding: 50px;
   margin: auto; }
 
 .section__container {
@@ -27,26 +27,22 @@ button {
 h1 {
   font-size: 48px;
   font-weight: 700;
-  color: #000000;
-  margin: 16px 0; }
+  color: #000000; }
 
 h2 {
-  font-size: 18px;
+  font-size: 28px;
   font-weight: 600;
-  color: #000000;
-  margin: 8px 0; }
+  color: #000000; }
 
 h3 {
   font-size: 18px;
   font-weight: 400;
-  color: #000000;
-  margin: 8px 0; }
+  color: #000000; }
 
 p {
   font-size: 18px;
   font-weight: 400;
-  color: #000000;
-  margin: 4px 0; }
+  color: #000000; }
 
 #navbar {
   display: flex;
@@ -234,9 +230,9 @@ p {
           margin-top: 10px; }
 
 #testimonials {
-  background: lightgray;
+  background: #a8dadc;
   padding: 30px;
-  margin: 40px 0; }
+  margin-top: 40px; }
   #testimonials .testimonials {
     margin: 40px; }
     #testimonials .testimonials .testimonial {
@@ -252,7 +248,7 @@ p {
         #testimonials .testimonials .testimonial .testimonials__avatar:nth-child(even) {
           margin-left: 40px; }
       #testimonials .testimonials .testimonial .testimonials__speechBubble {
-        background: white;
+        background: #f1faee;
         border-radius: 4px;
         padding: 18px;
         display: flex;
@@ -262,6 +258,21 @@ p {
           color: #000000; }
         #testimonials .testimonials .testimonial .testimonials__speechBubble a {
           color: palevioletred; }
+
+#contact {
+  background: #457b9d; }
+  #contact .contact__title,
+  #contact .contact__email,
+  #contact .contact__rights {
+    color: white; }
+  #contact .contact__title {
+    margin: 32px 0; }
+  #contact .contact__links {
+    margin: 24px 0;
+    font-size: 48px;
+    transition: all 100ms ease-in; }
+    #contact .contact__links i:hover {
+      transform: scale(1.1); }
 
 
 /*# sourceMappingURL=/style.97fcb138.css.map */

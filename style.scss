@@ -27,6 +27,7 @@ body {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 button {
@@ -38,7 +39,6 @@ button {
 
 .section {
   text-align: center;
-  padding: 50px;
   margin: auto;
 }
 
@@ -53,28 +53,24 @@ h1 {
   font-size: $font-large;
   font-weight: $weight-bold;
   color: $black;
-  margin: 16px 0;
 }
 
 h2 {
-  font-size: $font-regular;
+  font-size: $font-medium;
   font-weight: $weight-semi-bold;
   color: $black;
-  margin: 8px 0;
 }
 
 h3 {
   font-size: $font-regular;
   font-weight: $weight-regular;
   color: $black;
-  margin: 8px 0;
 }
 
 p {
   font-size: $font-regular;
   font-weight: $weight-regular;
   color: $black;
-  margin: 4px 0;
 }
 
 //NAVBAR
@@ -332,9 +328,9 @@ p {
 
 //SECTION-TESTIMONIALS
 #testimonials {
-  background: lightgray;
+  background: $skyBlue;
   padding: 30px;
-  margin: 40px 0;
+  margin-top: 40px;
   .testimonials {
     margin: 40px;
     .testimonial {
@@ -353,7 +349,7 @@ p {
         }
       }
       .testimonials__speechBubble {
-        background: white;
+        background: $white;
         border-radius: 4px;
         padding: 18px;
         display: flex;
@@ -366,6 +362,28 @@ p {
           color: palevioletred;
         }
       }
+    }
+  }
+}
+
+//CONTACT
+#contact {
+  background: $blue;
+  .contact__title,
+  .contact__email,
+  .contact__rights {
+    color: white;
+  }
+  .contact__title {
+    margin: 32px 0;
+  }
+  .contact__links {
+    margin: 24px 0;
+    font-size: $font-large;
+    transition: all 100ms ease-in;
+    i:hover {
+      transform: scale(1.1);
+      //   color: $red;
     }
   }
 }
