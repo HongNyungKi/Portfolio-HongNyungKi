@@ -2,12 +2,11 @@
   box-sizing: border-box; }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   cursor: default; }
 
 a {
-  text-decoration: none;
-  color: #f1faee; }
+  text-decoration: none; }
 
 button {
   background: transparent;
@@ -22,7 +21,8 @@ button {
 
 .section__container {
   max-width: 1200px;
-  margin: auto; }
+  margin: auto;
+  text-align: center; }
 
 h1 {
   font-size: 48px;
@@ -156,6 +156,81 @@ p {
         background: #1d3557;
         flex-basis: 30%;
         padding: 20px; }
+
+.work__categories {
+  margin: 40px; }
+  .work__categories .category__btn {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 8px 48px;
+    color: #000000; }
+    .work__categories .category__btn:hover, .work__categories .category__btn.active {
+      background: #1d3557;
+      color: #f1faee; }
+    .work__categories .category__btn:hover .category__count,
+    .work__categories .category__btn.active .category__count {
+      top: 0;
+      opacity: 1; }
+    .work__categories .category__btn .category__count {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: #e63946;
+      color: #f1faee;
+      border-radius: 50%;
+      line-height: 24px;
+      position: relative;
+      top: -20px;
+      opacity: 0;
+      transition: all 100ms ease-in; }
+
+.work__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .work__projects .project {
+    width: 280px;
+    height: 250px;
+    margin: 2px;
+    background: #f1faee;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .work__projects .project:hover .project__description {
+      opacity: 0.8;
+      transform: translateY(0); }
+    .work__projects .project img {
+      max-width: 100%;
+      max-height: 100%; }
+    .work__projects .project .project__description {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #000000;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #f1faee;
+      opacity: 0;
+      transition: all 100ms ease-in;
+      transform: translateY(10px); }
+      .work__projects .project .project__description h3 {
+        color: #f1faee; }
+        .work__projects .project .project__description h3:after {
+          content: "";
+          display: block;
+          width: 25px;
+          height: 3px;
+          background: #f1faee;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          margin-top: 10px; }
 
 
 /*# sourceMappingURL=/style.97fcb138.css.map */
