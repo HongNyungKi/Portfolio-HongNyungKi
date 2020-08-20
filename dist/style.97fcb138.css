@@ -17,7 +17,8 @@ button {
 
 .section {
   text-align: center;
-  margin: auto; }
+  margin: auto;
+  padding: 55px; }
 
 .section__container {
   max-width: 1200px;
@@ -27,12 +28,14 @@ button {
 h1 {
   font-size: 48px;
   font-weight: 700;
-  color: #000000; }
+  color: #000000;
+  margin: 15px; }
 
 h2 {
   font-size: 28px;
   font-weight: 600;
-  color: #000000; }
+  color: #000000;
+  margin: 15px; }
 
 h3 {
   font-size: 18px;
@@ -71,11 +74,16 @@ p {
         background: #1d3557; }
       #navbar .navbar__menu .navbar__menu__item.active {
         border: 1px solid #f1faee; }
+  #navbar .navbar__toggle-btn {
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: white;
+    display: none; }
 
 #home {
   background: url("/background.59c06501.png") center/cover no-repeat;
-  text-align: center;
-  padding: 80px 0; }
+  text-align: center; }
   #home .home__avatar {
     width: 250px;
     height: 250px;
@@ -145,14 +153,17 @@ p {
       flex-direction: column;
       justify-content: space-between; }
       #skills .skillset .skillset__right .skillset__title {
-        color: #f1faee; }
+        color: #f1faee;
+        margin-bottom: 10px; }
       #skills .skillset .skillset__right .tools {
         flex-basis: 70%;
-        padding: 20px; }
+        padding: 20px;
+        line-height: 1.5; }
       #skills .skillset .skillset__right .etc {
         background: #1d3557;
         flex-basis: 30%;
-        padding: 20px; }
+        padding: 20px;
+        line-height: 1.5; }
 
 .work__categories {
   margin: 40px; }
@@ -260,7 +271,8 @@ p {
           color: palevioletred; }
 
 #contact {
-  background: #457b9d; }
+  background: #457b9d;
+  padding: 20px; }
   #contact .contact__title,
   #contact .contact__email,
   #contact .contact__rights {
@@ -273,6 +285,30 @@ p {
     transition: all 100ms ease-in; }
     #contact .contact__links i:hover {
       transform: scale(1.1); }
+
+@media screen and (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start; }
+    #navbar .navbar__menu {
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
+      display: none; }
+    #navbar .navbar__toggle-btn {
+      display: block; }
+  .about__majors {
+    flex-direction: column;
+    margin: 20px; }
+    .about__majors .major {
+      margin: 10px; }
+  .skillset {
+    flex-direction: column; }
+  .category__btn {
+    margin: 5px; }
+  .project {
+    flex-grow: 1; } }
 
 
 /*# sourceMappingURL=/style.97fcb138.css.map */

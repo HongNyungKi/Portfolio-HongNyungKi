@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.section {
+    text-align: center;
+    margin: auto;
+    padding: 55px;
+}
+
+.section__container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}

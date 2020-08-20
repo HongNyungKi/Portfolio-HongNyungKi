@@ -1,0 +1,26 @@
+//TYPOGRAPHY
+h1 {
+    font-size: $font-large;
+    font-weight: $weight-bold;
+    color: $black;
+    margin: 15px;
+}
+
+h2 {
+    font-size: $font-medium;
+    font-weight: $weight-semi-bold;
+    color: $black;
+    margin: 15px;
+}
+
+h3 {
+    font-size: $font-regular;
+    font-weight: $weight-regular;
+    color: $black;
+}
+
+p {
+    font-size: $font-regular;
+    font-weight: $weight-regular;
+    color: $black;
+}
