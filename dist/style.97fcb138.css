@@ -78,7 +78,8 @@ p {
   background: #a8dadc;
   padding: 18px;
   color: white;
-  transition: all 300ms ease-in-out; }
+  transition: all 300ms ease-in-out;
+  z-index: 1; }
   #navbar.down {
     position: fixed;
     width: 100%;

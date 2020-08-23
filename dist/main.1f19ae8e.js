@@ -129,6 +129,20 @@ document.addEventListener("scroll", function () {
     navBar.classList.remove("down");
   }
 });
+var navBarMenu = document.querySelector(".navbar__menu");
+navBarMenu.addEventListener("click", function (event) {
+  var target = event.target;
+  var link = target.dataset.link;
+
+  if (link == null) {
+    return;
+  }
+
+  var scrollTo = document.querySelector(link);
+  scrollTo.scrollIntoView({
+    behavior: "smooth"
+  });
+});
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
