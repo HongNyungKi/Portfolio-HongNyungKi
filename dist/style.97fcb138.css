@@ -77,7 +77,13 @@ p {
   align-items: center;
   background: #a8dadc;
   padding: 18px;
-  color: white; }
+  color: white;
+  transition: all 300ms ease-in-out; }
+  #navbar.down {
+    position: fixed;
+    width: 100%;
+    padding: 13px;
+    background: #457b9d; }
   #navbar .navbar__logo {
     display: flex;
     align-items: center;
