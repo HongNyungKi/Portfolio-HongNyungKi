@@ -153,6 +153,12 @@ navBarMenu.addEventListener("click", function (event) {
 var homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', function () {
   scrollIntoView('#contact');
+}); // transparent home section
+
+var home = document.querySelector('.home__container');
+var homeheight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', function () {
+  home.style.opacity = 1 - window.scrollY / homeheight;
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -182,7 +188,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54094" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54435" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
