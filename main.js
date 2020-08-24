@@ -45,3 +45,18 @@ const homeheight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeheight;
 })
+
+//show arrowUp btn when scrolling down
+//auto scrolling up when arrow btn tapping
+const arrowUpBtn = document.querySelector('.arrowUp');
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeheight / 2) {
+        arrowUpBtn.classList.add('visible');
+    } else {
+        arrowUpBtn.classList.remove('visible');
+    }
+})
+
+arrowUpBtn.addEventListener('click', () => {
+    scrollIntoView('#home');
+})

@@ -159,6 +159,19 @@ var home = document.querySelector('.home__container');
 var homeheight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', function () {
   home.style.opacity = 1 - window.scrollY / homeheight;
+}); //show arrowUp btn when scrolling down
+//auto scrolling up when arrow btn tapping
+
+var arrowUpBtn = document.querySelector('.arrowUp');
+document.addEventListener('scroll', function () {
+  if (window.scrollY > homeheight / 2) {
+    arrowUpBtn.classList.add('visible');
+  } else {
+    arrowUpBtn.classList.remove('visible');
+  }
+});
+arrowUpBtn.addEventListener('click', function () {
+  scrollIntoView('#home');
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
