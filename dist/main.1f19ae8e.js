@@ -172,6 +172,28 @@ document.addEventListener('scroll', function () {
 });
 arrowUpBtn.addEventListener('click', function () {
   scrollIntoView('#home');
+}); //work catrgories
+//버튼을 클릭하면 해당하는 버튼의 data-filter값과 상응하는 data-type을 갖고있는
+//것들만 나타나게 하는것이다. 
+
+var workBtnContainer = document.querySelector('.work__categories');
+var projectContainer = document.querySelector('.work__projects');
+var projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', function (e) {
+  var filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+
+  if (filter == null) {
+    return;
+  }
+
+  projects.forEach(function (project) {
+    if (filter === '*' || filter === project.dataset.type) {
+      project.classList.remove('invisible');
+    } else {
+      project.classList.add('invisible');
+    }
+  });
+  console.log(filter);
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -201,7 +223,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54435" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61683" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -60,3 +60,26 @@ document.addEventListener('scroll', () => {
 arrowUpBtn.addEventListener('click', () => {
     scrollIntoView('#home');
 })
+
+//work catrgories
+//버튼을 클릭하면 해당하는 버튼의 data-filter값과 상응하는 data-type을 갖고있는
+//것들만 나타나게 하는것이다. 
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (filter == null) {
+        return;
+    }
+    projects.forEach((project) => {
+        if (filter === '*' || filter === project.dataset.type) {
+            project.classList.remove('invisible')
+        } else {
+            project.classList.add('invisible')
+
+        }
+    })
+    console.log(filter);
+})
