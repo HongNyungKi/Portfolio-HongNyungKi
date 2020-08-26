@@ -179,6 +179,10 @@ var workBtnContainer = document.querySelector(".work__categories");
 var projectContainer = document.querySelector(".work__projects");
 var projects = document.querySelectorAll(".project");
 workBtnContainer.addEventListener("click", function (e) {
+  var activeBtn = document.querySelector(".category__btn.active");
+  activeBtn.classList.remove("active");
+  var target = e.target.nodeName == "BUTTON" ? e.target : e.target.parentNode;
+  target.classList.add("active");
   var filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   projectContainer.classList.add("ani-out");
   setTimeout(function () {

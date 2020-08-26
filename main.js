@@ -68,10 +68,14 @@ const projectContainer = document.querySelector(".work__projects");
 const projects = document.querySelectorAll(".project");
 
 workBtnContainer.addEventListener("click", (e) => {
+  const activeBtn = document.querySelector(".category__btn.active");
+  activeBtn.classList.remove("active");
+  const target = e.target.nodeName == "BUTTON" ? e.target : e.target.parentNode;
+  target.classList.add("active");
+
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
 
   projectContainer.classList.add("ani-out");
-
   setTimeout(() => {
     projects.forEach((project) => {
       if (filter == project.dataset.type || filter == "*") {
