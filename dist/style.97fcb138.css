@@ -227,7 +227,9 @@ p {
 .work__projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  opacity: 1;
+  transition: all 200ms ease-out; }
   .work__projects .project {
     width: 280px;
     height: 250px;
@@ -272,6 +274,9 @@ p {
           margin-top: 10px; }
     .work__projects .project.invisible {
       display: none; }
+  .work__projects.ani-out {
+    opacity: 0;
+    transform: scale(0.96) translateY(40px); }
 
 #testimonials {
   background: #a8dadc;

@@ -150,50 +150,47 @@ navBarMenu.addEventListener("click", function (event) {
   scrollIntoView(link);
 }); //contact me btn
 
-var homeContactBtn = document.querySelector('.home__contact');
-homeContactBtn.addEventListener('click', function () {
-  scrollIntoView('#contact');
+var homeContactBtn = document.querySelector(".home__contact");
+homeContactBtn.addEventListener("click", function () {
+  scrollIntoView("#contact");
 }); // transparent home section
 
-var home = document.querySelector('.home__container');
+var home = document.querySelector(".home__container");
 var homeheight = home.getBoundingClientRect().height;
-document.addEventListener('scroll', function () {
+document.addEventListener("scroll", function () {
   home.style.opacity = 1 - window.scrollY / homeheight;
 }); //show arrowUp btn when scrolling down
 //auto scrolling up when arrow btn tapping
 
-var arrowUpBtn = document.querySelector('.arrowUp');
-document.addEventListener('scroll', function () {
+var arrowUpBtn = document.querySelector(".arrowUp");
+document.addEventListener("scroll", function () {
   if (window.scrollY > homeheight / 2) {
-    arrowUpBtn.classList.add('visible');
+    arrowUpBtn.classList.add("visible");
   } else {
-    arrowUpBtn.classList.remove('visible');
+    arrowUpBtn.classList.remove("visible");
   }
 });
-arrowUpBtn.addEventListener('click', function () {
-  scrollIntoView('#home');
+arrowUpBtn.addEventListener("click", function () {
+  scrollIntoView("#home");
 }); //work catrgories
-//버튼을 클릭하면 해당하는 버튼의 data-filter값과 상응하는 data-type을 갖고있는
-//것들만 나타나게 하는것이다. 
+//버튼의 data-filter값과 상응하는 data-type을 갖고있는 요소들만 화면에 나타나도록할것이다.
 
-var workBtnContainer = document.querySelector('.work__categories');
-var projectContainer = document.querySelector('.work__projects');
-var projects = document.querySelectorAll('.project');
-workBtnContainer.addEventListener('click', function (e) {
+var workBtnContainer = document.querySelector(".work__categories");
+var projectContainer = document.querySelector(".work__projects");
+var projects = document.querySelectorAll(".project");
+workBtnContainer.addEventListener("click", function (e) {
   var filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-
-  if (filter == null) {
-    return;
-  }
-
-  projects.forEach(function (project) {
-    if (filter === '*' || filter === project.dataset.type) {
-      project.classList.remove('invisible');
-    } else {
-      project.classList.add('invisible');
-    }
-  });
-  console.log(filter);
+  projectContainer.classList.add("ani-out");
+  setTimeout(function () {
+    projects.forEach(function (project) {
+      if (filter == project.dataset.type || filter == "*") {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+    projectContainer.classList.remove("ani-out");
+  }, 200);
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -223,7 +220,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61683" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51914" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
