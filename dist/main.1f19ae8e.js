@@ -118,15 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-"use strict"; //재사용을 위한 함수
-
-function scrollIntoView(selector) {
-  var scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({
-    behavior: "smooth"
-  });
-} //navBar slide down
-
+"use strict"; //메뉴바 자동 변환
 
 var navBar = document.querySelector("#navbar");
 var navBarHeight = navBar.getBoundingClientRect().height;
@@ -136,7 +128,7 @@ document.addEventListener("scroll", function () {
   } else {
     navBar.classList.remove("down");
   }
-}); //menu auto scrolling
+}); //메뉴바 클릭시 자동 스크롤
 
 var navBarMenu = document.querySelector(".navbar__menu");
 navBarMenu.addEventListener("click", function (event) {
@@ -148,19 +140,26 @@ navBarMenu.addEventListener("click", function (event) {
   }
 
   scrollIntoView(link);
-}); //contact me btn
+});
+
+function scrollIntoView(selector) {
+  var scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({
+    behavior: "smooth"
+  });
+} //contact me btn 클릭 자동 스크롤
+
 
 var homeContactBtn = document.querySelector(".home__contact");
 homeContactBtn.addEventListener("click", function () {
   scrollIntoView("#contact");
-}); // transparent home section
+}); //홈 배경 사진 스크롤시 투명도 조절
 
 var home = document.querySelector(".home__container");
 var homeheight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", function () {
   home.style.opacity = 1 - window.scrollY / homeheight;
-}); //show arrowUp btn when scrolling down
-//auto scrolling up when arrow btn tapping
+}); //arrowUp btn
 
 var arrowUpBtn = document.querySelector(".arrowUp");
 document.addEventListener("scroll", function () {
@@ -173,14 +172,14 @@ document.addEventListener("scroll", function () {
 arrowUpBtn.addEventListener("click", function () {
   scrollIntoView("#home");
 }); //work catrgories
-//버튼의 data-filter값과 상응하는 data-type을 갖고있는 요소들만 화면에 나타나도록할것이다.
 
 var workBtnContainer = document.querySelector(".work__categories");
 var projectContainer = document.querySelector(".work__projects");
 var projects = document.querySelectorAll(".project");
 workBtnContainer.addEventListener("click", function (e) {
   var activeBtn = document.querySelector(".category__btn.active");
-  activeBtn.classList.remove("active");
+  activeBtn.classList.remove("active"); //버튼이 아닌 숫자 클릭시 버그 해결위해
+
   var target = e.target.nodeName == "BUTTON" ? e.target : e.target.parentNode;
   target.classList.add("active");
   var filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
@@ -196,7 +195,7 @@ workBtnContainer.addEventListener("click", function (e) {
     projectContainer.classList.remove("ani-out");
   }, 200);
 });
-},{}],"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -224,7 +223,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58749" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54253" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -400,5 +399,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","main.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","main.js"], null)
 //# sourceMappingURL=/main.1f19ae8e.js.map
