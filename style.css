@@ -1,12 +1,12 @@
-@import './style/_common.css';
-@import './style/_variables.css';
-@import './style/_response.css';
+@import './style/common.css';
+@import './style/variables.css';
+@import './style/response.css';
 
-@import './style/.css';
-@import './style/_home.css';
-@import './style/_about.css';
-@import './style/_skills.css';
-@import './style/_work.css';
-@import './style/_testimonials.css';
-@import './style/_contact.css';
-@import './style/_arrowUp.css';
+@import './style/nav.css';
+@import './style/home.css';
+@import './style/about.css';
+@import './style/skills.css';
+@import './style/work.css';
+@import './style/testimonials.css';
+@import './style/contact.css';
+@import './style/arrowUp.css';
