@@ -5,6 +5,7 @@ export default class Navbar{
         this.navBar = document.querySelector('#navbar');
         this.navBarHeight = this.navBar.getBoundingClientRect().height;
         this.navBarMenu = document.querySelector('.navbar__menu');
+        this.navBarToggle = document.querySelector('.navbar__toggle-btn');
     }
 
     resizeNavbar(){
@@ -24,6 +25,12 @@ export default class Navbar{
                 return ;
             }
             scrollIntoView(link)
+            this.navBarMenu.classList.remove('open');
+        })
+    }
+    respondMenu(){
+        this.navBarToggle.addEventListener('click',()=>{
+            this.navBarMenu.classList.toggle('open');
         })
     }
 }

@@ -13,6 +13,7 @@ const arrowUp = new ArrowUp();
 
 navbar.resizeNavbar();
 navbar.clickAutoScroll();
+navbar.respondMenu();
 home.contactAutoScroll();
 home.homeOpacityDown();
 work.controllWorkProject();
