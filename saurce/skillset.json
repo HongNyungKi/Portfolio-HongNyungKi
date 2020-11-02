@@ -1,0 +1,26 @@
+{
+    "skill1":{
+        "name":"html",
+        "score":80
+    },
+    "skill2":{
+        "name":"css",
+        "score":80
+    },
+    "skill3":{
+        "name":"scss",
+        "score":70
+    },
+    "skill4":{
+        "name":"javascript",
+        "score":80
+    },
+    "skill5":{
+        "name":"jquery",
+        "score":60
+    },
+    "skill6":{
+        "name":"react",
+        "score":50
+    }
+}

@@ -1,0 +1,46 @@
+#testimonials{
+    background: var(--skyBlue);
+    
+}
+
+.testimonials{
+    margin-top: 40px;
+}
+
+.testimonial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.tesimonials__avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.tesimonials__avatar:nth-child(odd) {
+    margin-right: 40px;
+}
+.tesimonials__avatar:nth-child(even) {
+    margin-left: 40px;
+}
+
+.testimonials__speechBubble{
+    background: var(--white);
+    border-radius: 4px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.speechBubble__say{
+    text-align: left;
+}
+.speechBubble__name{
+    color: var(--indigo);
+    margin-top: 20px;
+    font-weight: var(--weight-bold);
+}

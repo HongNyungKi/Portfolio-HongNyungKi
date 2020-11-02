@@ -1,0 +1,30 @@
+#home{
+    text-align: center;
+    background: url('../saurce/background.png') center/cover no-repeat;
+    text-align: center;
+}
+
+.home__avatar{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.home__title,
+.home__description{
+    color: var(--white);
+}
+
+.home__contact{
+    color: var(--white);
+    font-size: var(--font-regular);
+    font-weight: var(--weight-semi-bold);
+    margin-top: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--white);
+    border-radius: 4px;
+}
+.home__contact:hover{
+    background: var(--indigo);
+}

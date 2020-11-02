@@ -1,0 +1,16 @@
+#contact{
+    background: var(--blue);
+    color: var(--white);
+}
+
+.contact__title{
+    margin-bottom: 30px;
+}
+
+.contact__links{
+    margin: 24px 0;
+    font-size: var(--font-large);
+}
+.contact__links i:hover{
+    transform : scale(1.1);
+}

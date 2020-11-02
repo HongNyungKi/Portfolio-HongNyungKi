@@ -1,0 +1,24 @@
+.about__majors{
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.major__img{
+    width: 200px;
+    height: 200px;
+    border: 1px solid var(--blue);
+    border-radius: 50%;
+    padding: 14px;
+    transition: all 100ms ease-in;
+}
+.major:hover .major__img{
+    padding: 2px;
+    border: 3px solid var(--blue)
+}
+
+
+.major__description{
+    opacity: 0.7;
+    font-size: var(--font-small);
+}

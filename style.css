@@ -1,0 +1,12 @@
+@import './style/_common.css';
+@import './style/_variables.css';
+
+@import './style/_nav.css';
+@import './style/_home.css';
+@import './style/_about.css';
+@import './style/_skills.css';
+@import './style/_work.css';
+@import './style/_testimonials.css';
+@import './style/_contact.css';
+
+@import './style/_arrowUp.css';
