@@ -2,7 +2,7 @@
 @import './style/_variables.css';
 @import './style/_response.css';
 
-@import './style/_nav.css';
+@import './style/.css';
 @import './style/_home.css';
 @import './style/_about.css';
 @import './style/_skills.css';
